@@ -8,3 +8,4 @@ pymupdf
 langchain_openai
 langchain-google-genai
 streamlit
+google-search-results

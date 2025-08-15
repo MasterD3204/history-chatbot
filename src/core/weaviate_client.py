@@ -1,10 +1,10 @@
 import os
 import weaviate
 from weaviate.classes.init import Auth
+import os
+from dotenv import load_dotenv
 
-os.environ["WEAVIATE_CLUSTER_URL"] = "x8sip58ftxmo1f6sc9r3bg.c0.asia-southeast1.gcp.weaviate.cloud"
-os.environ["WEAVIATE_API_KEY"] = "ZitmenVrZnNTTTh3RzRSUF9JSUNXS25pLzRpNE44aEV0UUluN2xpV0dLMUlWaWVuZnc3QXF0bkU1ZytzPV92MjAw"
-
+load_dotenv()
 
 # Lấy từ biến môi trường
 WEAVIATE_CLUSTER_URL = os.getenv("WEAVIATE_CLUSTER_URL")

@@ -16,21 +16,20 @@ gemini_api_key = os.getenv("GEMINI_API_KEY")
 
 llm_cohere = ChatCohere(
     cohere_api_key=cohere_api_key,
-    model="command-r-plus", # Thường dùng cho các cuộc trò chuyện. Hoặc "command-r"
+    model="command-r-plus", 
     temperature=0.7
 
 )
 
 llm_openai = ChatOpenAI(
-    base_url="https://test-aiservice.misa.com.vn//llm-router/v1", # Đảm bảo có /llm-router/v1
+    base_url="http://10.0.6.170:30132/v1", 
     api_key=openai_api_key,
     model="gpt-4.1",  # Model mặc định
     temperature=0.7,
     default_headers={"App-Code": "fresher"}, # Header bắt buộc
     model_kwargs={"extra_body": {
         "service": "generate_summary_for_langchain_app", # Tham số bổ sung cho logging
-        # "user_id": "langchain_user_123",
-        # "misa_id": "langchain_tenant_abc"
+   
     }}
 )
 
@@ -40,11 +39,11 @@ LLM_MAP = {
     "gemini": llm_gemini,
     "openai": llm_openai,
     "cohere": llm_cohere,
-    "default": llm_gemini
+    #"default": llm_gemini
 }
 
 def get_llm(llm_choice: str):
     """Hàm tiện ích để lấy LLM từ map, nếu không có thì trả về default."""
-    return LLM_MAP.get(llm_choice, LLM_MAP["default"])
+    return LLM_MAP.get(llm_choice, LLM_MAP["gemini"])
 
 
