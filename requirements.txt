@@ -12,3 +12,5 @@ google-search-results
 beautifulsoup4
 protobuf
 grpcio
+transformers 
+accelerate
