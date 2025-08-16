@@ -1,26 +1,14 @@
-# Core LangChain
-langchain==0.2.14
-langchain-openai==0.1.22
-langchain-cohere==0.1.9
-langchain-google-genai==0.0.12
-langchain-weaviate==0.0.3
-
-# Vector DB client
-weaviate-client==4.6.4
-
-# ML & Embeddings
-torch==2.2.2
-sentence-transformers==2.7.0
-
-# Parsing, PDF, scraping
-pymupdf==1.24.4
-beautifulsoup4==4.12.3
-google-search-results==2.4.2
-requests==2.32.3
-
-# Streamlit (UI)
-streamlit==1.36.0
-
-# Critical for avoiding protobuf/grpc conflicts
-protobuf==6.31.0
-grpcio==1.62.2
+langchain
+weaviate-client
+torch 
+sentence-transformers 
+langchain_cohere 
+langchain-weaviate
+pymupdf
+langchain_openai
+langchain-google-genai
+streamlit
+google-search-results
+beautifulsoup4
+protobuf
+grpcio
